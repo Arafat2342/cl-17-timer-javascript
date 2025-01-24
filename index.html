@@ -93,19 +93,19 @@
             toggleButton.innerHTML = '<i class="fas fa-stop"></i>';
         }
         isRunning = !isRunning;
+        resettimer.onclick = function(){
+
+        clearInterval(interval);
+
+        milliseconds = 0;
+        seconds = 0;
+        
+        appendMilliseconds.innerHTML = "00";
+        appendseconds.innerHTML = "00";
+        toggleButton.innerHTML = '<i class="fas fa-play"></i>';
+}
     });
 
-            resettimer.onclick = function(){
-
-                clearInterval(interval)
-
-                milliseconds = 0;
-                seconds = 0;
-
-                appendMilliseconds.innerHTML = "00";
-                appendseconds.innerHTML = "00";
-                toggleButton.innerHTML = '<i class="fas fa-play"></i>';
-            }
 
             function start_timer(){
                 milliseconds++;
